@@ -1,6 +1,3 @@
-# aaa ammm chi tesave 
-christ cama
-teng a gurrancapa, chi te sapa
+# pakages repo
 
-- furi cha mu, u brav u reiu...
-- aaa mochitesva. gir pe secondiglan
+pakage
