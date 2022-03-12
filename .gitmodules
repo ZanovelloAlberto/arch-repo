@@ -1,4 +1,5 @@
 [submodule "src/ly"]
 	path = src/ly
 	url = https://aur.archlinux.org/ly.git
-    ignore = dirty
+    ignore = all
+	shallow = true
