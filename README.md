@@ -1,3 +1,3 @@
-# [pakages repo](https://zanovelloalberto.github.io/packages/)
+# [pakages repo](https://arch-setup.github.io/packages/)
 
 pakage
