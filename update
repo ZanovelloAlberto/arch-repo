@@ -19,7 +19,8 @@ for dir in $SRC/*; do
 done
 
 
+# === UPDATE DB
+(cd $X86 && repo-add 'custom.db.tar.gz' *.pkg.tar.zst)
 
 # === UPDATE STATIC SITE
 ./static_generator .
-
