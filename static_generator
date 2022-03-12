@@ -1,3 +1,4 @@
+#!/sbin/python
 """ Build index from directory listing
 
 make_index.py </path/to/directory> [--header <header text>]
@@ -68,7 +69,7 @@ INDEX_TEMPLATE = r"""
 </html>
 """
 
-EXCLUDED = ['index.html', '.git']
+EXCLUDED = ['index.html', '.git', 'src', 'main.py']
 
 import os
 import argparse

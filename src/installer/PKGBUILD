@@ -1,0 +1,41 @@
+# Maintainer: Aditya Shakya <adi1090x@gmail.com>
+
+pkgname=arch-setup-installer
+pkgver=1.0
+pkgrel=2
+pkgdesc="Command line installer for Archcraft for expert users."
+url="https://github.com/zanovelloalberto/arch-setup"
+arch=('any')
+license=('GPL3')
+provides=($pkgname)
+conflicts=($pkgname)
+depends=(
+    'alacritty'
+    'dialog'
+)
+
+source=(
+    abif
+    abif.desktop
+    english.trans
+)
+sha256sums=SKIP
+
+sha256sums=(
+    '3aff7e2c57c13ebc80d784d47cc4c89c534d7dcc5ef4777069c15f238eb8b929'
+    'd08cf04eb0468dfa1ba3e96f3aabb03eacc9390683fcf71c91c1c09a0a646f0e'
+    '4881e9576968070ace22d20aa2773d59997a3ab847e66824858dfe3d3dc88596'
+    # 'd62f065830aa3739cc031156b9690805c7b2e811b4a178c8b4acd8725d561c94'
+)
+
+package() {
+    local _idir="${pkgdir}/abif-master"
+    
+    mkdir -p "$_idir"
+    
+    install -Dm 755 abif 					"$_idir"/abif
+    install -Dm 644 english.trans 			"$_idir"/english.trans
+    
+    # copy files
+    install -Dm 644 abif.desktop 			-t ${pkgdir}/usr/share/applications/
+}

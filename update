@@ -1,0 +1,22 @@
+#!/bin/bash
+
+SRC=$PWD/src
+
+######################################################################
+##																	##
+## 				RUN EVERY TIME A PACKAGE IS ADDED		            ##
+##																	##
+######################################################################
+
+
+# === UPDATE BINARIES
+X86=$PWD/x86_64
+
+for dir in $SRC/*; do
+    cd $dir && PKGDEST=$X86 makepkg -cf 
+    echo "$dir"
+done
+
+# === UPDATE STATIC SITE
+./static_generator .
+
