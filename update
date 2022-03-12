@@ -1,6 +1,7 @@
 #!/bin/bash
 
 SRC=$PWD/src
+WD=$PWD
 
 ######################################################################
 ##																	##
@@ -13,9 +14,11 @@ SRC=$PWD/src
 X86=$PWD/x86_64
 
 for dir in $SRC/*; do
-    cd $dir && PKGDEST=$X86 makepkg -cf 
+    (cd $dir && PKGDEST=$X86 makepkg -cf )
     echo "$dir"
 done
+
+
 
 # === UPDATE STATIC SITE
 ./static_generator .
