@@ -1,4 +1,4 @@
-# [pakages repo](https://zanovelloalberto.github.io/arch-repo/)
+# [pakages repo](https://arch-setup.github.io/packages/)
 
 ### sha256sum Validity
 to fill this filed, set the checksum result for each file in the source in an array.
